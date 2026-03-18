@@ -37,6 +37,5 @@ A full-stack AI application that generates tailored social media content based o
 ---
 
 ## 🌟 Features
-* **Platform-Specific Tuning:** Generates different tones for LinkedIn vs. Instagram.
-* **Responsive Design:** Works on Desktop and Mobile.
+* **Platform-Specific Tuning:** Generates different tones for LinkedIn vs. Instagram vs. Meta vs. Youtube.
 * **Fast Execution:** Asynchronous API calls for quick content generation.
