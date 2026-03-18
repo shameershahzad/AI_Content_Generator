@@ -1,0 +1,161 @@
+/* 1. GLOBAL RESET */
+html, body {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  background-color: #020617;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* 2. MAIN WRAPPER */
+.main-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #020617;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* 3. DYNAMIC CONTAINER */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.4s ease-in-out;
+}
+
+.content-container.parallel {
+  flex-direction: row; 
+  max-width: 1200px;
+  width: 95%;
+  align-items: flex-start; 
+}
+
+/* 4. SHARED CARD STYLES */
+.glass-card, .result-card {
+  flex: 1; 
+  min-width: 380px;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  padding: 30px; /* Reduced padding slightly */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  color: #f8fafc;
+  margin-bottom: 20px; /* Reduced gap under title */
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/* 5. INPUT GROUP */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* Tiny gap between label and input */
+  margin-bottom: 12px; /* Tight spacing between groups */
+}
+
+.input-group label {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 6. INPUTS & BUTTONS */
+.input-field {
+  width: 100%; 
+  padding: 12px; /* Slimmer padding */
+  border-radius: 10px; 
+  border: 1px solid #334155;
+  background: #1e293b; 
+  color: white; 
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+textarea.input-field {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.select-field {
+  width: 100%; 
+  padding: 12px; 
+  border-radius: 10px; 
+  border: none;
+  background: #f8fafc; 
+  color: #020617; 
+  cursor: pointer; 
+  font-weight: bold;
+}
+
+.button-group { 
+  display: flex; 
+  gap: 10px; 
+  margin-top: 45px; /* Minimal gap between select and buttons */
+}
+
+.submit-btn {
+  flex: 3; padding: 14px; border-radius: 10px;
+  background: #2563eb; color: white; font-weight: 800;
+  border: none; cursor: pointer; transition: 0.2s;
+}
+
+.clear-btn {
+  flex: 1; background: #334155; color: white;
+  border-radius: 10px; border: none; cursor: pointer;
+}
+
+.submit-btn:hover { background: #3b82f6; transform: translateY(-1px); }
+
+/* 7. RESULT CARD SPECIFICS */
+.result-card {
+  background: #1e293b;
+  border-left: 5px solid #22d3ee;
+}
+
+.result-header {
+  display: flex; justify-content: space-between;
+  color: #22d3ee; font-weight: bold; font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.platform-tag { background: rgba(34, 211, 238, 0.1); padding: 4px 10px; border-radius: 6px; }
+
+.result-body {
+  background: #020617; padding: 18px;
+  border-radius: 12px; color: #e2e8f0;
+  min-height: 200px; 
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+pre { 
+  white-space: pre-wrap; 
+  word-wrap: break-word; 
+  line-height: 1.6; 
+  margin: 0; 
+  font-family: inherit; 
+}
+
+/* 8. RESPONSIVE & ANIMATION */
+@media (max-width: 950px) {
+  .content-container.parallel { flex-direction: column; align-items: center; }
+  .glass-card, .result-card { min-width: 100%; width: 100%; }
+}
+
+.fade-in { animation: fadeIn 0.5s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }

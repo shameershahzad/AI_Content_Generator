@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Production Build
+dist/
+build/
+
+# Local Environment/API Keys
+.env
+.env.local
+
+# Debug Logs
+*.log
