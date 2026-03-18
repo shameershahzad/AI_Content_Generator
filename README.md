@@ -24,7 +24,7 @@ A full-stack AI application that generates tailored social media content based o
 ## 📦 Installation
 
 ### Backend Setup
-1. Navigate to the langchain folder: `cd Langchain`
+1. Navigate to the langchain folder: `cd LangChain`
 2. Create a virtual environment: `python -m venv .venv`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Run the server: `uvicorn main:app --reload`
