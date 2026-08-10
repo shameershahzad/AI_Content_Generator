@@ -11,7 +11,22 @@ app = FastAPI()
 # 1. Setup CORS so React (port 5173) can talk to Python (port 8000)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
     allow_methods=["*"],
     allow_headers=["*"],
 )

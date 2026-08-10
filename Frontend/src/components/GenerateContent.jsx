@@ -34,7 +34,7 @@ export default function GenerateContent() {
           <h1 className="app-title">AI Content Generator</h1>
           
           <div className="input-group">
-          <label>Topic</label>
+          <label>Topic:</label>
             <textarea 
               className="input-field textarea-field"
               placeholder="Describe your topic." 

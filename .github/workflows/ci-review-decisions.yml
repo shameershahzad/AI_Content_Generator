@@ -1,0 +1,25 @@
+name: Sentra Review Decisions
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  process-decision:
+    if: github.event.issue.pull_request != null
+    runs-on: self-hosted
+    steps:
+      - name: Send decision to Sentra
+        shell: powershell
+        env:
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          PR_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          $body = @{
+            pr_number    = [int]$env:PR_NUMBER
+            comment_body = $env:COMMENT_BODY
+          } | ConvertTo-Json
+          $response = Invoke-RestMethod -Uri "http://localhost:8000/api/projects/${{ vars.SENTRA_PROJECT_ID }}/ci-decide-findings" -Method POST -Headers @{ "X-Sentra-Api-Key" = "${{ secrets.SENTRA_API_KEY }}" } -ContentType "application/json" -Body $body
+          Write-Host "Accepted: $($response.accepted -join ', ')"
+          Write-Host "Rejected: $($response.rejected -join ', ')"
+          Write-Host "All resolved: $($response.all_resolved)"
