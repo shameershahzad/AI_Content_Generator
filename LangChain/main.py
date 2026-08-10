@@ -72,6 +72,156 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"], 
 )
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "https://your-frontend-domain.com"],
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
     allow_methods=["*"],
     allow_headers=["*"],
 )
