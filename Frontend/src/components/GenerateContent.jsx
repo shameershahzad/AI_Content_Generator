@@ -15,7 +15,7 @@ export default function GenerateContent() {
       const content = await generatePost(topic, platform);
       setResult(content);
     } catch (err) {
-      setResult("Error:",err);
+      setResult(`Error: ${err.message}`);
     } finally {
       setLoading(false);
     }

@@ -11,3 +11,9 @@ build/
 
 # Debug Logs
 *.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
