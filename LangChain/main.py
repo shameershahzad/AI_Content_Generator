@@ -8,10 +8,15 @@ from socialgen import generate_post # Import your existing AI function
 load_dotenv()
 app = FastAPI()
 
-# 1. Setup CORS so React (port 5173) can talk to Python (port 8000)
+# 1. Setup CORS so React can talk to Python - localhost for dev, plus
+# whatever the deployed frontend's origin is (set as ALLOWED_ORIGINS on
+# the host, e.g. the Netlify URL) so the hosted app isn't blocked.
+DEFAULT_ORIGINS = ["http://localhost:5173", "http://127.0.0.1:5173"]
+extra_origins = [origin.strip() for origin in os.getenv("ALLOWED_ORIGINS", "").split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=DEFAULT_ORIGINS + extra_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
