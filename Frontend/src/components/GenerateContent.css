@@ -96,14 +96,22 @@ textarea.input-field {
 }
 
 .select-field {
-  width: 100%; 
-  padding: 12px; 
-  border-radius: 10px; 
-  border: none;
-  background: #f8fafc; 
-  color: #020617; 
-  cursor: pointer; 
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #f8fafc;
+  cursor: pointer;
   font-weight: bold;
+}
+
+/* Firefox and some Chromium builds render the opened options list using
+   these - without them it stayed white (browser default) even though the
+   closed field itself was already dark. */
+.select-field option {
+  background: #1e293b;
+  color: #f8fafc;
 }
 
 .button-group { 
