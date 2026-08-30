@@ -21,12 +21,19 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 2. Define the data shape the Frontend sends
+# 2. Health check route - visiting the deployed URL directly otherwise
+# hits FastAPI's default 404 ({"detail":"Not Found"}), same pattern as
+# the Notes App backend's root route.
+@app.get("/")
+async def root():
+    return {"message": "AI Content Generator API is running!"}
+
+# 3. Define the data shape the Frontend sends
 class PostRequest(BaseModel):
     topic: str
     platform: str
 
-# 3. The API Endpoint
+# 4. The API Endpoint
 @app.post("/generate")
 async def handle_request(data: PostRequest):
     try:
