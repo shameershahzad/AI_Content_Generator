@@ -147,6 +147,36 @@ textarea.input-field {
 
 .platform-tag { background: rgba(34, 211, 238, 0.1); padding: 4px 10px; border-radius: 6px; }
 
+.result-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background: rgba(34, 211, 238, 0.1);
+  border: none;
+  border-radius: 6px;
+  color: #22d3ee;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(34, 211, 238, 0.25);
+}
+
+.copy-btn svg {
+  width: 14px;
+  height: 14px;
+}
+
 .result-body {
   background: #020617; padding: 18px;
   border-radius: 12px; color: #e2e8f0;
